@@ -118,8 +118,7 @@ void empilhamento_maximo(int h, char* filename){
         valor = empilhamento(h-caixas[i].a, caixas[i].l, caixas[i].p, 0);
         valor = valor  + caixas[i].v;
         alturas[h][i] = valor;
-        //
-        printf("Iteração %d valor_pilha: %d \n", i, valor);
+        //printf("Iteração %d valor_pilha: %d \n", i, valor);
         if (valor > melhor){
             melhor = valor;
             topo = i;
@@ -186,9 +185,6 @@ void printSolucao(int valor, int topo, char* filename){
         }            
     }
     fprintf(saida,"%d\n", qtd);
-    temp_altura = h_max - caixas[topo].a;
-    temp_valor = valor - caixas[topo].v;
-    temp_topo = topo;
     for (i = qtd; i > 0 ; i--){
         fprintf(saida,"%d %d\n",caixas[solucao[i]].id, (solucao[i] % 2)+1);
     }

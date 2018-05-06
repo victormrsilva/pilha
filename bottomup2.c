@@ -132,9 +132,6 @@ int main(int argc, char *argv[])
             }            
         }
         fprintf(saida,"%d\n", qtd);
-        temp_altura = altura-caixas[caixa_topo].a;
-        temp_valor = melhor-caixas[caixa_topo].v;
-        temp_caixa_topo = caixa_topo;
         for (int i = qtd; i > 0 ; i--){
             fprintf(saida,"%d %d\n",caixas[solucao[i]].id, (solucao[i] % 2)+1);
         }
